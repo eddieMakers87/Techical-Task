@@ -2,7 +2,7 @@
 let inp = document.querySelector(".inp");
 let image = document.querySelector("#image");
 let btnAdd = document.querySelector("#btn-add");
-let text = document.querySelector("#title");
+let text = document.querySelector("#post");
 
 // ? инпуты из модалки
 let editTitle = document.querySelector("#edit-title");
