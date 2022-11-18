@@ -4,6 +4,46 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "text": "eddie",
+      "image": "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg",
+      "id": 2
+    },
+    {
+      "text": "eddie",
+      "image": "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg",
+      "id": 3
+    },
+    {
+      "text": "eddie",
+      "image": "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg",
+      "id": 4
+    },
+    {
+      "text": "eddie",
+      "image": "eddie",
+      "id": 5
+    },
+    {
+      "text": "e",
+      "image": "e",
+      "id": 6
+    },
+    {
+      "text": "e",
+      "image": "e",
+      "id": 7
+    },
+    {
+      "text": "Drake show",
+      "image": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/AnZcWgXZOKM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+      "id": 8
+    },
+    {
+      "text": "jjjj",
+      "image": "jjj",
+      "id": 9
     }
   ],
   "comments": [
@@ -13,8 +53,31 @@
       "postId": 1
     }
   ],
-  "profile": {
-    "username": "123",
-    "password": "321"
-  }
+  "profile": [
+    {
+      "username": "kkk",
+      "password": "kkk",
+      "id": 1
+    },
+    {
+      "username": "kkkjjj",
+      "password": "jjj",
+      "id": 2
+    },
+    {
+      "username": "qq",
+      "password": "qqqq",
+      "id": 3
+    },
+    {
+      "username": "kkkkk",
+      "password": "l;;;;",
+      "id": 4
+    },
+    {
+      "username": "maks",
+      "password": "maks",
+      "id": 5
+    }
+  ]
 }

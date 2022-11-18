@@ -46,6 +46,7 @@
                 >Авторизация
               </a>
             </li>
+
             <li class="nav-item remSecond">
               <a
                 class="nav-link active text-white"
@@ -55,7 +56,16 @@
                 >Регистрация</a
               >
             </li>
+            <div
+              style="display: none"
+              class="align-items-center justify-content-end w-100"
+            >
+              <button id="logout-submit" class="btn btn-primary profile-btn">
+                Log Out
+              </button>
+            </div>
           </ul>
+
           <form class="d-flex m-auto">
             <input
               class="form-control me-3 col-6"
@@ -90,9 +100,25 @@
         class="mb-2 w-100 form-control inp"
         placeholder="Image link "
       />
-      <button class="btn btn-primary" type="button">Добавить пост</button>
-      <!-- ?admin panel end -->
+      <button class="btn btn-primary" type="button" id="btn-add">
+        Добавить пост
+        <img src="./icons/comment.svg" alt="comment" width="30px" />
+      </button>
     </div>
+    <!-- ?admin panel end -->
+    <!-- ?content start -->
+    <div
+      id="products-list"
+      class="d-flex flex-column align-items-center"
+      style="
+        height: 500px;
+        overflow: scroll;
+        max-width: 840px;
+        width: 100%;
+        margin: 0 auto;
+      "
+    ></div>
+    <!-- ?content end -->
     <!-- Модалка регистрации начало  -->
     <div
       class="modal fade"
@@ -132,16 +158,6 @@
               />
               <!-- ! -->
             </form>
-            <p>
-              Do you already have an
-              <a
-                href=""
-                id="toLogin"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                >account?</a
-              >
-            </p>
           </div>
           <div class="modal-footer">
             <button
@@ -151,7 +167,7 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary" id="submit">
+            <button type="button" class="btn btn-primary" id="submitReg">
               Save
             </button>
           </div>
@@ -198,12 +214,6 @@
                 class="form-control my-3"
               />
             </form>
-            <p>
-              you don't have an
-              <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                >>account?</a
-              >
-            </p>
           </div>
           <div class="modal-footer d-flex justify-content-center">
             <button
@@ -221,6 +231,7 @@
       </div>
     </div>
     <!-- Модалка для авторизации конец -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
