@@ -39,6 +39,11 @@
       "text": "Drake show",
       "image": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/AnZcWgXZOKM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
       "id": 8
+    },
+    {
+      "text": "jjjj",
+      "image": "jjj",
+      "id": 9
     }
   ],
   "comments": [
@@ -48,8 +53,31 @@
       "postId": 1
     }
   ],
-  "profile": {
-    "username": "eddie",
-    "password": "123"
-  }
+  "profile": [
+    {
+      "username": "kkk",
+      "password": "kkk",
+      "id": 1
+    },
+    {
+      "username": "kkkjjj",
+      "password": "jjj",
+      "id": 2
+    },
+    {
+      "username": "qq",
+      "password": "qqqq",
+      "id": 3
+    },
+    {
+      "username": "kkkkk",
+      "password": "l;;;;",
+      "id": 4
+    },
+    {
+      "username": "maks",
+      "password": "maks",
+      "id": 5
+    }
+  ]
 }

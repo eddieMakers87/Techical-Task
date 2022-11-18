@@ -1,12 +1,14 @@
 let API = "http://localhost:8000/posts";
 let API_USERS = "http://localhost:8000/profile";
 
-//! регистрация
+//! регистрация и авторизация
 let username = document.querySelector("#username");
 let password = document.querySelector("#password");
-let submit = document.querySelector("#submit");
+let submit = document.querySelector("#submitReg");
 let first = document.querySelector(".remFirst");
 let second = document.querySelector(".remSecond");
+let profileBtn = document.querySelector(".profile-btn");
+let logIn = document.querySelector("#LogIn");
 
 // ! CRUD
 let inp = document.querySelector(".inp");
@@ -44,6 +46,66 @@ submit.addEventListener("click", async () => {
     },
   }).then(() => alert("Пользователь добавлен"));
 });
+
+logIn.addEventListener("click", async () => {
+  let obj2 = {
+    usernameSignIn: usernameSignIn.value,
+    passwordSignIn: passwordSignIn.value,
+  };
+  if (!obj2.usernameSignIn.trim() || !obj2.passwordSignIn.trim()) {
+    alert("fill the form field");
+  }
+  // console.log(obj2);
+
+  await fetch(API_USERS)
+    .then((res) => res.json())
+    .then((data) => {
+      let found = false;
+      console.log(data);
+      data.forEach((i) => {
+        if (
+          usernameSignIn.value == i.username &&
+          passwordSignIn.value == i.password
+        ) {
+          alert("Вы вошли в аккаунт");
+          found = true;
+          let user = {
+            username: i.username,
+            id: i.id,
+          };
+          localStorage.setItem("user", JSON.stringify(user));
+          console.log(data);
+          return;
+        }
+      });
+      if (!found) {
+        alert("Пользователь не найден");
+      }
+    });
+  function checkUser() {
+    console.log(JSON.parse(localStorage.getItem("user")));
+    let user = JSON.parse(localStorage.getItem("user"));
+    if (JSON.parse(localStorage.getItem("user"))) {
+      first.remove();
+      second.remove();
+      profileBtn.style.display = "block";
+    }
+  }
+  checkUser();
+});
+
+// function checkUser() {
+//   console.log(JSON.parse(localStorage.getItem("user")));
+//   let user = JSON.parse(localStorage.getItem("user"));
+//   if (JSON.parse(localStorage.getItem("user"))) {
+//     profile.style.display = block;
+//     profileBtn.style.display = block;
+//     profile.innerHTML = user.username;
+//     first.remove();
+//     second.remove();
+//   }
+// }
+// checkUser();
 
 // ! ADD - Обработчик событий на добавление
 btnAdd.addEventListener("click", async function () {
