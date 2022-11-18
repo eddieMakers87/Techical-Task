@@ -90,7 +90,7 @@ async function render() {
     let newElem = document.createElement("div");
     newElem.id = element.id;
     newElem.innerHTML = `
-      <div class="card m-5" style="width: 18rem;">
+      <div class="card" style="width: 100%;">
       <img src=${element.image} class="card-img-top" alt="...">
       <div class="card-body">
         <p class="card-text">${element.text}</p>
