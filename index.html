@@ -90,9 +90,25 @@
         class="mb-2 w-100 form-control inp"
         placeholder="Image link "
       />
-      <button class="btn btn-primary" type="button">Добавить пост</button>
-      <!-- ?admin panel end -->
+      <button class="btn btn-primary" type="button" id="btn-add">
+        Добавить пост
+        <img src="./icons/comment.svg" alt="comment" width="30px" />
+      </button>
     </div>
+    <!-- ?admin panel end -->
+    <!-- ?content start -->
+    <div
+      id="products-list"
+      class="d-flex flex-column align-items-center"
+      style="
+        height: 500px;
+        overflow: scroll;
+        max-width: 840px;
+        width: 100%;
+        margin: 0 auto;
+      "
+    ></div>
+    <!-- ?content end -->
     <!-- Модалка регистрации начало  -->
     <div
       class="modal fade"
