@@ -9,6 +9,11 @@ let first = document.querySelector(".remFirst");
 let second = document.querySelector(".remSecond");
 let profileBtn = document.querySelector(".profile-btn");
 let logIn = document.querySelector("#LogIn");
+let logOut = document.querySelector("#logOut");
+
+//! Поисковая строка
+let searchInp = document.querySelector("#search");
+let searchVal = "";
 
 // ! CRUD
 let inp = document.querySelector(".inp");
@@ -55,7 +60,6 @@ logIn.addEventListener("click", async () => {
   if (!obj2.usernameSignIn.trim() || !obj2.passwordSignIn.trim()) {
     alert("fill the form field");
   }
-  // console.log(obj2);
 
   await fetch(API_USERS)
     .then((res) => res.json())
@@ -88,7 +92,7 @@ logIn.addEventListener("click", async () => {
     if (JSON.parse(localStorage.getItem("user"))) {
       first.remove();
       second.remove();
-      profileBtn.style.display = "block";
+      // logOut.classList.remove("d-none");
     }
   }
   checkUser();
@@ -96,14 +100,10 @@ logIn.addEventListener("click", async () => {
 
 // ! ADD - Обработчик событий на добавление
 btnAdd.addEventListener("click", async function () {
-  // собираем обьект для добавления в дб.жсон
   let obj = {
     text: text.value,
     image: image.value,
   };
-
-  // проверим - создается ли он
-  // console.log(obj);
 
   if (!obj.text.trim() || !obj.image.trim()) {
     alert("Заполните все поля");
@@ -129,10 +129,9 @@ btnAdd.addEventListener("click", async function () {
 // `${API}?q=${searchVal}&_page=${currentPage}&_limit=3`
 // ! отображение из json-server
 async function render() {
-  let products = await fetch(API)
+  let products = await fetch(`${API}?q=${searchVal}`)
     .then((res) => res.json())
-    .catch((err) => console.log(err)); // отловим ошибку
-  //drawPaginationButtons();
+    .catch((err) => console.log(err));
 
   list.innerHTML = "";
   products.forEach((element) => {
@@ -152,3 +151,9 @@ async function render() {
   });
 }
 render();
+
+//! поиск
+searchInp.addEventListener("input", () => {
+  searchVal = searchInp.value;
+  render();
+});

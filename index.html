@@ -23,7 +23,7 @@
             alt=""
         /></a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler bg-white"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -56,11 +56,11 @@
                 >Регистрация</a
               >
             </li>
-            <div
-              style="display: none"
-              class="align-items-center justify-content-end w-100"
-            >
-              <button id="logout-submit" class="btn btn-primary profile-btn">
+            <div class="align-items-center justify-content-end w-100">
+              <button
+                id="logout-submit"
+                class="d-none btn btn-primary profile-btn text-white"
+              >
                 Log Out
               </button>
             </div>
@@ -68,13 +68,17 @@
 
           <form class="d-flex m-auto">
             <input
+              id="search"
               class="form-control me-3 col-6"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
+            <button
+              class="btn btn-outline-success bg-white text-black"
+              type="submit"
+            >
+              Поиск
             </button>
           </form>
         </div>
